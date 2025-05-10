@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:5
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGODB_DATABASE: nest-pokemon
+    volumes:
+        # volumes are similar to ports, I can specify a local path to store the data
+        # my-local-path:/container-path
+        # otherwise, the data will not be persisted
+      - ./mongo:/data/db
+      
