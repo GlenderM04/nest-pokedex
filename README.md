@@ -54,9 +54,19 @@ Start the application in development mode:
 yarn start:dev
 ```
 
-### 6. Access the Application
+### 6. Seed Default Pokémon Data
 
-Once the application is running, you can access it at:
+To populate the database with default Pokémon, execute the seed endpoint in development mode. You can do this by sending a POST request to:
+
+```
+http://localhost:<port>/api/v2/seed
+```
+
+Replace `<port>` with the actual port number specified in your configuration (default is `3000`).
+
+### 7. Access the Application
+
+Once the application is running and seeded, you can access it at:
 
 ```
 http://localhost:<port>
