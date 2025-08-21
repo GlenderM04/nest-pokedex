@@ -28,7 +28,17 @@ Navigate to the project directory and install the required dependencies:
 yarn install
 ```
 
-### 3. Install Nest CLI Globally
+### 3. Set Up Environment Variables
+
+Copy the `.env.template` file and rename it to `.env`. You can do this using the following command:
+
+```bash
+cp .env.template .env
+```
+
+Then, update the `.env` file with your desired configuration values.
+
+### 4. Install Nest CLI Globally
 
 Ensure you have the Nest CLI installed globally. Run the following command in your terminal:
 
@@ -36,7 +46,7 @@ Ensure you have the Nest CLI installed globally. Run the following command in yo
 npm i -g @nestjs/cli
 ```
 
-### 4. Set Up the Database
+### 5. Set Up the Database
 
 Start the database using Docker Compose:
 
@@ -46,7 +56,7 @@ docker-compose up -d
 
 This will set up the database in a detached mode (`-d` flag).
 
-### 5. Run the Application
+### 6. Run the Application
 
 Start the application in development mode:
 
@@ -54,7 +64,7 @@ Start the application in development mode:
 yarn start:dev
 ```
 
-### 6. Seed Default Pokémon Data
+### 7. Seed Default Pokémon Data
 
 To populate the database with default Pokémon, execute the seed endpoint in development mode. You can do this by sending a POST request to:
 
@@ -64,7 +74,7 @@ http://localhost:<port>/api/v2/seed
 
 Replace `<port>` with the actual port number specified in your configuration (default is `3000`).
 
-### 7. Access the Application
+### 8. Access the Application
 
 Once the application is running and seeded, you can access it at:
 
