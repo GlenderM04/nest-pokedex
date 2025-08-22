@@ -8,6 +8,24 @@
 
 This project is built using [NestJS](https://nestjs.com/), a progressive Node.js framework for building efficient and scalable server-side applications.
 
+---
+
+## 📖 Index
+
+- [Getting Started](#getting-started)
+  - [1. Clone the Repository](#1-clone-the-repository)
+  - [2. Install Dependencies](#2-install-dependencies)
+  - [3. Set Up Environment Variables](#3-set-up-environment-variables)
+  - [4. Install Nest CLI Globally](#4-install-nest-cli-globally)
+  - [5. Set Up the Database](#5-set-up-the-database)
+  - [6. Run the Application](#6-run-the-application)
+  - [7. Seed Default Pokémon Data](#7-seed-default-pokémon-data)
+  - [8. Access the Application](#8-access-the-application)
+- [Production Build](#production-build)
+- [Additional Notes](#additional-notes)
+
+---
+
 ## Getting Started
 
 Follow the steps below to set up and run the project in development mode.
@@ -83,6 +101,29 @@ http://localhost:<port>
 ```
 
 Replace `<port>` with the actual port number specified in your configuration (default is `3000`).
+
+---
+
+## 🚀 Production Build
+
+Follow these steps to create a production-ready Docker image:
+
+1. **Create the `.env.prod` file**  
+   Copy the `.env.template` and rename it to `.env.prod`:
+
+   ```bash
+   cp .env.template .env.prod
+   ```
+
+2. **Fill the values**  
+   Edit `.env.prod` and set the appropriate production values for your environment.
+
+3. **Build and run the Docker image**  
+   Use the following command to build and start the production containers:
+
+   ```bash
+   docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+   ```
 
 ---
 
